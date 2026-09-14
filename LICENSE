@@ -1,0 +1,47 @@
+Paper Agent Non-Commercial License 1.0
+
+Copyright (c) 2026 Paper Agent contributors
+
+1. Scope
+This license covers project-owned code, documentation, and artwork, including
+public/assistant-cat-v2.png and public/cat-v4-*.webp (the "Materials").
+Third-party components remain subject to their own licenses.
+
+2. Non-commercial permission
+You may use, study, copy, modify, and redistribute the Materials, including
+modified versions, solely for non-commercial purposes such as personal
+learning, education, and non-commercial research.
+
+3. Commercial restriction
+Commercial use requires separate prior written permission from the relevant
+copyright holders. Commercial use includes selling or licensing the Materials
+for payment, incorporating them into commercial products, offering paid or
+advertising-supported services based on them, or using them to support the
+operations of a for-profit business. Making an otherwise commercial service
+free to its users does not remove this restriction.
+
+4. Notices and redistribution
+Retain this license and applicable copyright notices in all copies or
+substantial portions. Clearly identify your modifications. Redistributed
+Materials and modifications must retain these non-commercial restrictions;
+you may not grant recipients commercial rights you do not hold.
+No trademark rights are granted. Rights not expressly granted are reserved.
+
+5. Disclaimer
+THE MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. TO THE EXTENT PERMITTED BY LAW, THE COPYRIGHT HOLDERS SHALL
+NOT BE LIABLE FOR CLAIMS, DAMAGES OR OTHER LIABILITY ARISING FROM THE
+MATERIALS OR THEIR USE.
+
+This is a source-available, non-commercial license, not the MIT License or
+an OSI-approved open-source license.
+
+中文说明（英文条款为准）
+本许可适用于项目自有代码、文档和猫角色及动画素材。允许个人学习、
+教学和非商业研究等非商业用途的使用、复制、修改及再分发，须保留
+版权和许可声明、标明修改，并保留非商业限制。商业使用须事先取得
+相应版权所有者的另行书面授权，包括收费销售、商业产品集成、收费
+或广告支持服务，以及用于营利企业的业务运营。第三方组件遵循各自
+许可。本项目按现状提供，不提供保证；本许可不是 MIT 或 OSI 认可的
+开源许可。

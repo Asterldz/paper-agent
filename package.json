@@ -1,0 +1,92 @@
+{
+  "name": "paper-agent",
+  "version": "1.0.0",
+  "description": "Local-first AI paper reader with translation, RAG and a LangGraph assistant.",
+  "private": true,
+  "main": "desktop/main.cjs",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "vinext dev",
+    "local:build": "node desktop/build-desktop.mjs",
+    "local:start": "node scripts/local-start.mjs",
+    "build": "vinext build",
+    "start": "vinext start",
+    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "test:agent": "tsx --test tests/agent*.test.ts",
+    "test:desktop": "node --test tests/desktop-runtime.test.cjs",
+    "test:pet": "tsx --test tests/pet-animation.test.ts",
+    "desktop:dev": "node desktop/dev-runner.mjs",
+    "desktop:build": "node desktop/build-desktop.mjs",
+    "desktop:pack": "npm run desktop:build && electron-builder --dir",
+    "desktop:dist": "npm run desktop:build && electron-builder",
+    "typecheck": "tsc --noEmit --incremental false"
+  },
+  "dependencies": {
+    "@langchain/core": "^1.2.9",
+    "@langchain/langgraph": "^1.4.14",
+    "@langchain/openai": "^1.5.11",
+    "next": "16.2.6",
+    "pdfjs-dist": "^6.2.108",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "zod": "^4.5.4",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.37.1",
+    "@cloudflare/workers-types": "4.20260515.1",
+    "@openai/sites-vite-plugin": "^0.1.0 || ^0.2.0",
+    "@tailwindcss/postcss": "4.2.1",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "@vitejs/plugin-rsc": "0.5.26",
+    "electron": "^44.3.0",
+    "electron-builder": "^26.15.3",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.2.6",
+    "react-server-dom-webpack": "19.2.6",
+    "tailwindcss": "4.2.1",
+    "tsx": "^4.23.13",
+    "typescript": "5.9.3",
+    "vinext": "1.0.0-beta.3",
+    "vite": "8.0.13",
+    "wrangler": "4.92.0"
+  },
+  "type": "module",
+  "build": {
+    "afterPack": "desktop/after-pack.cjs",
+    "appId": "com.hewenhao.paperagent",
+    "productName": "Paper Agent",
+    "artifactName": "Paper-Agent-${version}-${os}-${arch}.${ext}",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "desktop/main.cjs",
+      "desktop/runtime.cjs",
+      "package.json",
+      "!node_modules/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "dist/standalone",
+        "to": "app-server"
+      }
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": ["dmg", "zip"]
+    },
+    "win": {
+      "target": ["nsis"]
+    },
+    "linux": {
+      "category": "Office",
+      "target": ["AppImage"]
+    }
+  }
+}

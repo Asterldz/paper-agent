@@ -1,0 +1,13 @@
+{
+  "name": "Paper Agent — AI 学术阅读器",
+  "short_name": "Paper Agent",
+  "description": "划选英文论文内容，即时获得上下文感知的中文翻译、解释和术语联想。",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f4f5f7",
+  "theme_color": "#3157d5",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
