@@ -45,4 +45,4 @@ Code signing and notarization are deliberately not automated: future GitHub rele
 - Electron 44.3.0 download recovered; the official archive checksum was verified. The macOS arm64 app was built, launched in an independent window, and installed locally. Quitting stopped its server. The installation uses an ad-hoc local signature, not Developer ID signing or notarization. DMG, Windows and Linux have not been verified.
 - The prior online dependency audit reported 5 production dependency findings, including Next.js. A later offline audit is not evidence that these were fixed. Resolve and rerun the online audit before a public binary release.
 - Browser data is scoped to the website origin. Existing hosted-site documents/settings are not automatically migrated into Electron; retain the browser profile and original PDFs.
-- The included MIT license is a proposed project license. Review ownership and redistribution rights for the referenced cat artwork before publishing the repository.
+- Project-owned code, documentation and cat artwork use the non-commercial license in `LICENSE`. Third-party components retain their own licenses.

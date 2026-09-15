@@ -1,19 +1,19 @@
-# Project owner's reading preferences
+# Reading preference examples
 
-Status: initial profile specification, derived from explicit feedback in this conversation. The App loads the main reading Skill and the current device policy, not this owner's history. These preferences document the original owner's requirements, not a profile imposed on all visitors.
+These examples describe supported preference scopes, not a shared profile applied to all users. The application loads the reading Skill and the current device policy.
 
-| ID | Scoped preference | Evidence and interpretation |
+| ID | Preference | Scope and constraints |
 | --- | --- | --- |
-| P01 | Translation should normally be continuous text, without added paragraph breaks or headings. Preserve mathematical meaning and symbols. | The later request “翻译的时候还是别分段了” supersedes the earlier request to preserve translation paragraph divisions. This does not flatten explanations or summaries. |
-| P02 | Long explanations should be structured and easy to follow; short explanations need not use a rigid template. | “对于解释可以适当分段，条理分明”。 |
-| P03 | Explain context-relevant technical terms and offer useful extensions or analogies, clearly distinguished from source claims. | Requests for “相关专有名词的解释以及部分联想”。 |
-| P04 | Prefer the current paper when answering; referenced papers are important evidence when a question depends on them. | “优先从文献中寻找答案” and “当前文献的参考论文也是重中之重”。 Do not claim a reference was read if only its bibliography entry is available. |
-| P05 | Prioritize translation latency and useful contextual caching. | Repeated requests for faster translation and word/term caching. This does not authorize extra paid speculative calls or sacrifice translation accuracy. |
-| P06 | Thinking behavior should be configurable by task. | Earlier requests turned translation thinking off and terminology thinking on; later requests asked to expose these as settings. Preserve actual saved choices; do not impose a global thinking toggle. |
-| P07 | Organize the library around user-named folders. | Request for flexible folder naming and agent-assisted movement. Physical moves need a real authorized file tool, not only an App collection update. |
+| P01 | Continuous translation without extra headings | Preserve mathematical meaning; do not flatten explanations or override explicit formatting settings. |
+| P02 | Structured long explanations | Short answers need not use a rigid template. |
+| P03 | Contextual terminology and analogies | Distinguish source claims from supplementary interpretation. |
+| P04 | Current-paper and reference evidence first | Bibliography metadata alone is not inspected full-text evidence. |
+| P05 | Low-latency translation and contextual caching | Do not sacrifice accuracy or initiate speculative paid calls. |
+| P06 | Task-specific thinking configuration | Preserve explicit saved settings instead of imposing a global toggle. |
+| P07 | User-defined library folders | Application collections do not grant system filesystem permissions. |
 
-## Conflict and persistence rules
+## Conflict and persistence
 
-An explicit current setting or task instruction takes precedence over this initial profile. Only persist a new preference when the user indicates lasting intent or confirms it; otherwise apply it to the current task only. Later explicit preferences supersede earlier ones only within the same scope. Keep the replaced value in version history for rollback.
+The current request and explicit settings take precedence. Persist a preference only when lasting intent is explicit or confirmed; otherwise apply it to the current task. Later preferences supersede earlier ones only within the same scope. Preserve versions for rollback.
 
-Questions, quoted text inside a paper, and an error message are not preference updates. Ambiguous comments such as “还是不对” require task context before classifying a change. Do not translate the owner's preference into a universal factual or methodological rule.
+Questions, source quotations, and error messages are not preference updates. Ambiguous feedback requires context and must not silently become a permanent rule.
